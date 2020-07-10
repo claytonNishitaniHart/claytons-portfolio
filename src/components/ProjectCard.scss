@@ -1,0 +1,71 @@
+.Card-base {
+  position: relative;
+  width: 300px;
+  height: 405px;
+  background-color: aquamarine;
+  overflow: hidden;
+}
+
+.Card-background {
+  height: 515px;
+  transform: translate(-35%, -10%);
+  filter: blur(10px);
+}
+
+.Card-image {
+  width: 300px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Card-info {
+  position: absolute;
+  bottom: -105px;
+  left: 10px;
+  height: 190px;
+  width: 280px;
+  z-index: 2;
+  color: white;
+  transition: bottom ease-in 250ms;
+}
+
+.need-border {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.info-name {
+  position: absolute;
+  top: 0;
+  font-size: 2rem;
+}
+
+.info-description {
+  position: absolute;
+  top: 85px;
+  font-size: 1rem;
+}
+
+.info-button {
+  position: absolute;
+  width: 20px;
+  top: 150px;
+  left: 120px;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  &::after {
+    content: '\2192';
+    position: absolute;
+    transform: translate(15px, -17px);
+    opacity: 0;
+    transition: all ease-in 250ms;
+  }
+  &:hover {
+    &::after {
+      transform: translate(30px, -17px);
+      opacity: 1;
+    }
+  }
+}

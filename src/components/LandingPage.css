@@ -1,0 +1,198 @@
+body {
+    transition: background-color 0.5s ease-in;
+}
+
+:root {
+    /*LIGHT-MODE*/
+    --lightGrad1: rgba(85,154,215,1);
+    --lightGrad2: rgba(255,109,243,1);
+    --lightMainColor: #dbe2ff;
+    --lightSecondaryColor: #4b4b4b;
+    --lightAccentColor: rgba(157,138,226,1);
+
+    /*DARK-MODE*/
+    --darkGrad1: #1e5b5c;
+    --darkGrad2: #711bd9;
+    --darkMainColor: #4b4b4b;
+    --darkSecondaryColor: white;
+    --darkAccentColor: #3d4c81;
+    --togglePos: 0;
+}
+
+.light {
+    /*BUTTON*/
+    --initialTextColor: white;
+    --slideTextColor: var(--lightAccentColor);
+
+    --initialBgColor: transparent;
+    --slideBgColor: white;
+
+    /*HEADING*/
+    --headingGrad: linear-gradient(0deg, var(--lightGrad1) 0%, var(--lightGrad2) 100%);
+    --headingMainColor: white;
+
+    /*CONTENT*/
+    --contentMainColor: var(--lightSecondaryColor);
+    --contentBGColor: var(--lightMainColor);
+    background-color: var(--lightMainColor);
+}
+
+.dark {
+    /*BUTTON*/
+    --initialTextColor: var(--darkSecondaryColor);
+    --slideTextColor: var(--darkAccentColor);
+
+    --initialBgColor: transparent;
+    --slideBgColor: var(--darkSecondaryColor);
+
+    /*HEADING*/
+    --headingGrad: linear-gradient(0deg, var(--darkGrad1) 0%, var(--darkGrad2) 100%);
+    --headingMainColor: var(--darkSecondaryColor);
+
+    /*CONTENT*/
+    --contentMainColor: var(--darkSecondaryColor);
+    --contentBGColor: var(--darkMainColor);
+    background-color: var(--darkMainColor);
+}
+
+.LandingPage-Heading {
+    background: var(--headingGrad);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: var(--headingMainColor);
+    clip-path: polygon(50% 0%, 100% 0%, 100% 65%, 50% 100%, 0% 65%, 0% 0%);
+    transition: background 0.5s ease-in, color 1s ease-in;
+}
+
+.LandingPage-Content {
+    position: relative;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    z-index: 999;
+    color: var(--contentMainColor);
+    background-color: var(--contentBGColor);
+    transition: background-color 0.5s ease-in, color 1s ease-in;
+}
+
+.LandingPage-Projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+.LandingPage-Text {
+    position: fixed;
+    display: inline;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    pointer-events: none;
+}
+
+.LandingPage-Logo {
+    max-width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes rainbow {
+    from {
+        filter: hue-rotate(0deg);
+    }
+    to {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.LandingPage-Logo:hover {
+    animation: rainbow 2s linear;
+    animation-iteration-count: infinite;
+}
+
+.LandingPage-Button {
+    width: 12rem;
+    height: 4rem;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: .2em solid;
+    font-size: 1.5rem;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+
+    color: var(--initialTextColor);
+
+    background-image: linear-gradient(180deg,
+    var(--initialBgColor) 0%,
+    var(--initialBgColor) 50%,
+    var(--slideBgColor) 50%,
+    var(--slideBgColor) 100%);
+    background-size: 100% 200%;
+    transition: background-position .2s ease-in,
+    color .2s linear;
+    transition-delay: 0.0s, 0.15s;
+}
+
+.LandingPage-Button:hover {
+    color: var(--slideTextColor);
+    cursor: pointer;
+    background-position: -100% 100%;
+    border: none;
+}
+
+.LandingPage-Toggle {
+    width: 4rem;
+    height: 2rem;
+    position: absolute;
+    top: 10px;
+    right: 45px;
+    border: .1em solid;
+    border-radius: 2rem;
+    background-color: transparent;
+    color: var(--initialTextColor);
+    cursor: pointer;
+}
+
+.LandingPage-Toggle::before {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.1em solid;
+    border-radius: 100%;
+    top: 0.1rem;
+    left: 0.1rem;
+    color: var(--initialTextColor);
+    background-color: var(--initialTextColor);
+    transform: translateX(var(--togglePos));
+    transition: transform 0.25s ease-out;
+}
+
+.sun {
+    position: absolute;
+    top: -5px;
+    left: -35px;
+    font-size: 2rem;
+}
+
+.moon {
+    position: absolute;
+    top: -2px;
+    right: -35px;
+    font-size: 1.75rem;
+}
+
+.LandingPage-Toggle:focus {
+    outline: 0;
+}
