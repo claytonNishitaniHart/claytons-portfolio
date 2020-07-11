@@ -29,7 +29,7 @@ class ProjectCard extends React.Component{
                 <div id={"info"+ this.props.projectName} className={"Card-info"}>
                     <span className={this.props.needBorder ? "info-name need-border" : "info-name"}>{this.props.projectName}</span>
                     <span className={"info-description"}>{this.props.projectDescription}</span>
-                    <a className={"info-button"} href={this.props.projectLink} target={"_blank"} rel={"noopener noreferrer"}>{this.props.projectButtonName}</a>
+                    <a className={"info-button"} href={this.props.projectLink} target={"_blank"} rel={"noopener noreferrer"}>Link</a>
                 </div>
             </div>
         );

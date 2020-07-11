@@ -68,7 +68,6 @@ body {
 
 .LandingPage-Content {
     position: relative;
-    padding-left: 2rem;
     padding-top: 2rem;
     min-height: 100vh;
     display: flex;
@@ -80,10 +79,18 @@ body {
     transition: background-color 0.5s ease-in, color 1s ease-in;
 }
 
+#Projects {
+    margin-left: 10vw;
+    padding-top: 2rem;
+}
+
 .LandingPage-Projects {
+    padding: 5vh 3vw;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-gap: 3rem;
+    grid-row-gap: 5rem;
+    justify-content: center;
 }
 
 .LandingPage-Text {
@@ -122,7 +129,7 @@ body {
     width: 12rem;
     height: 4rem;
     position: absolute;
-    bottom: 20%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: .2em solid;
@@ -195,4 +202,52 @@ body {
 
 .LandingPage-Toggle:focus {
     outline: 0;
+}
+
+.socials {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+    z-index: 999;
+}
+
+.socials-img {
+    width: 100px;
+    z-index: 999;
+}
+
+.socials-panel {
+    position: fixed;
+    bottom: calc(1vh + 110px);
+    right: 2vw;
+    width: 100px;
+    height: 0;
+    z-index: 4;
+    opacity: 0;
+    transition: all ease-in 150ms;
+}
+
+.socials-button {
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    z-index: 5;
+}
+
+.button-icon {
+    color: #711bd9;
+    width: 50px;
+    height: 50px;
+}
+
+.github {
+    position: relative;
+    transform: translate(25px, 90px);
+}
+
+.linkedin {
+    position: relative;
+    transform: translate(-25px, 150px);
 }
