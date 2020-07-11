@@ -82,12 +82,12 @@ class LandingPage extends React.Component {
                         <img className={"socials-img"} src={Logo} alt={"socials"}/>
                     </div>
                     <div id={"socials-panel"} className={"socials-panel"}>
-                        <button className={"socials-button github"}>
+                        <a className={"socials-button github"} href={"https://github.com/claytonNishitaniHart"} target={"_blank"} rel={"noopener noreferrer"}>
                             <FaGithubSquare className={"button-icon"}/>
-                        </button>
-                        <button className={"socials-button linkedin"}>
+                        </a>
+                        <a className={"socials-button linkedin"} href={"https://www.linkedin.com/in/clayton-nishitani-hart-845b93175/"} target={"_blank"} rel={"noopener noreferrer"}>
                             <FaLinkedin className={"button-icon"}/>
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
