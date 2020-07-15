@@ -62,7 +62,7 @@ class LandingPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={"LandingPage"}>
                 <div className={"LandingPage-Heading"}>
                     <img className={"LandingPage-Logo"} src={Logo} alt={"logo"} />
                     <h2 className={"LandingPage-Text"}><span role={"img"} aria-label={"cool"}>😎</span>CLAYTON NISHITANI-HART<span role={"img"} aria-label={"cool"}>😎</span></h2>
