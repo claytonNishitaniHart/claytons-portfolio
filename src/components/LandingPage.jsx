@@ -2,6 +2,8 @@ import React from "react";
 import "./LandingPage.css";
 import ProjectCard from "./ProjectCard";
 import Logo from "./../images/face.png";
+import EasyBank from "./../images/easybank.png";
+import EasyBankBG from "./../images/easybank_bg.png";
 import TomNook from "./../images/tom_nook.png";
 import NooksCranny from "./../images/nooks_cranny.jpg";
 import DwightSchrute from "./../images/dwight_schrute.png";
@@ -73,6 +75,7 @@ class LandingPage extends React.Component {
                 <div className={"LandingPage-Content"}>
                     <h2 id={"Projects"}>Projects</h2>
                     <div className={"LandingPage-Projects"}>
+                        <ProjectCard projectName={"Easybank Landing Page"} projectDescription={"A landing page for a fictional bank for FrontendMentor.io"} projectImage={EasyBank} projectBackground={EasyBankBG} projectLink={"https://easybank-landing-page-xi-five.vercel.app/"} needBorder={true}/>
                         <ProjectCard projectName={"Nook's Cranny ecommerce shop"} projectDescription={"An ecommerce website based on Nook's Cranny."} projectImage={TomNook} projectBackground={NooksCranny} projectLink={"https://nooks-cranny.vercel.app/"} needBorder={false}/>
                         <ProjectCard projectName={"Dwight Schrute Markov Twitter bot"} projectDescription={"A twitter bot that responds to mentions that contain the #dwigtschrudequote."} projectImage={DwightSchrute} projectBackground={TheOffice} projectLink={"https://github.com/claytonNishitaniHart/twitterbot"} needBorder={true}/>
                         <ProjectCard projectName={"Eiro"} projectDescription={"Eiro was my final year project that another programmer, three artists, and I worked on for a full year."} projectImage={Controller} projectBackground={Eiro} projectLink={"https://jack3311.itch.io/eiro"} needBorder={false}/>
@@ -85,7 +88,7 @@ class LandingPage extends React.Component {
                         <a className={"socials-button github"} href={"https://github.com/claytonNishitaniHart"} target={"_blank"} rel={"noopener noreferrer"}>
                             <FaGithubSquare className={"button-icon"}/>
                         </a>
-                        <a className={"socials-button linkedin"} href={"https://www.linkedin.com/in/clayton-nishitani-hart-845b93175/"} target={"_blank"} rel={"noopener noreferrer"}>
+                        <a className={"socials-button linkedin"} href={"https://www.linkedin.com/in/clayton-nishitani-hart-845b93175/a"} target={"_blank"} rel={"noopener noreferrer"}>
                             <FaLinkedin className={"button-icon"}/>
                         </a>
                     </div>
