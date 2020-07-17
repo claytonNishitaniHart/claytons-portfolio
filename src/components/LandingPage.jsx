@@ -75,11 +75,11 @@ class LandingPage extends React.Component {
                 <div className={"LandingPage-Content"}>
                     <h2 id={"Projects"}>Projects</h2>
                     <div className={"LandingPage-Projects"}>
-                        <ProjectCard projectName={"Easybank Landing Page"} projectDescription={"A landing page for a fictional bank for FrontendMentor.io"} projectImage={EasyBank} projectBackground={EasyBankBG} projectLink={"https://easybank-landing-page-xi-five.vercel.app/"} needBorder={true}/>
-                        <ProjectCard projectName={"Nook's Cranny ecommerce shop"} projectDescription={"An ecommerce website based on Nook's Cranny."} projectImage={TomNook} projectBackground={NooksCranny} projectLink={"https://nooks-cranny.vercel.app/"} needBorder={false}/>
-                        <ProjectCard projectName={"Dwight Schrute Markov Twitter bot"} projectDescription={"A twitter bot that responds to mentions that contain the #dwigtschrudequote."} projectImage={DwightSchrute} projectBackground={TheOffice} projectLink={"https://github.com/claytonNishitaniHart/twitterbot"} needBorder={true}/>
-                        <ProjectCard projectName={"Eiro"} projectDescription={"Eiro was my final year project that another programmer, three artists, and I worked on for a full year."} projectImage={Controller} projectBackground={Eiro} projectLink={"https://jack3311.itch.io/eiro"} needBorder={false}/>
-                        <ProjectCard projectName={"Weather App"} projectDescription={"A weather app that uses the user's location to get the weather for each day in a week."} projectImage={Weather} projectBackground={Bliss} projectLink={"https://weather-app-topaz-nine.vercel.app/"} needBorder={false}/>
+                        <ProjectCard projectName={"Easybank Landing Page"} projectDescription={"A landing page for a fictional bank for FrontendMentor.io"} projectImage={EasyBank} projectBackground={EasyBankBG} projectLink={"https://easybank-landing-page-xi-five.vercel.app/"}/>
+                        <ProjectCard projectName={"Nook's Cranny ecommerce shop"} projectDescription={"An ecommerce website based on Nook's Cranny."} projectImage={TomNook} projectBackground={NooksCranny} projectLink={"https://nooks-cranny.vercel.app/"}/>
+                        <ProjectCard projectName={"Dwight Schrute Markov Twitter bot"} projectDescription={"A twitter bot that responds to mentions that contain the #dwigtschrudequote."} projectImage={DwightSchrute} projectBackground={TheOffice} projectLink={"https://github.com/claytonNishitaniHart/twitterbot"}/>
+                        <ProjectCard projectName={"Eiro"} projectDescription={"Eiro was my final year project that another programmer, three artists, and I worked on for a full year."} projectImage={Controller} projectBackground={Eiro} projectLink={"https://jack3311.itch.io/eiro"}/>
+                        <ProjectCard projectName={"Weather App"} projectDescription={"A weather app that uses the user's location to get the weather for each day in a week."} projectImage={Weather} projectBackground={Bliss} projectLink={"https://weather-app-topaz-nine.vercel.app/"}/>
                     </div>
                     <div className={"socials"} onClick={this.toggleSocials}>
                         <img className={"socials-img"} src={Logo} alt={"socials"}/>
