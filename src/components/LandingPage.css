@@ -6,6 +6,8 @@ body {
 }
 
 :root {
+    font-size: 16px;
+
     /*LIGHT-MODE*/
     --lightGrad1: rgba(85,154,215,1);
     --lightGrad2: rgba(255,109,243,1);
@@ -130,10 +132,9 @@ body {
 
 .LandingPage-Text {
     position: fixed;
-    display: inline;
-    padding-left: 15vw;
-    padding-right: 15vw;
-    transform: translateY(15vh);
+    top: 50vh;
+    display: block;
+    width: 100%;
     font-size: 3rem;
     text-align: center;
     pointer-events: none;
@@ -228,8 +229,8 @@ body {
     height: 1.5rem;
     border: 0.1rem solid;
     border-radius: 100%;
-    top: 0.1rem;
-    right: 2.1rem;
+    top: 1px;
+    right: 2.05rem;
     color: var(--initialTextColor);
     background-color: var(--initialTextColor);
     transform: translateX(var(--togglePos));
@@ -322,11 +323,9 @@ body {
 
     .LandingPage-Text {
         position: fixed;
-        display: inline;
-        padding-left: 0;
-        padding-right: 0;
-        font-size: 2.2rem;
-        transform: translateY(15vh);
+        top: 44vh;
+        display: block;
+        width: 100%;
         text-align: center;
         pointer-events: none;
     }

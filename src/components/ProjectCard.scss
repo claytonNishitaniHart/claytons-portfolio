@@ -80,7 +80,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border: .2em solid;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background-color: transparent;
   cursor: pointer;
   overflow: hidden;
@@ -93,7 +93,7 @@
           var(--initialBgColor) 50%,
           var(--contentMainColor) 50%,
           var(--contentMainColor) 100%);
-  background-size: 100% 200%;
+  background-size: 100% 210%;
   transition: background-position 0.2s ease-in, color 0.2s linear;
   -o-transition: background-position 0.2s ease-in, color 0.2s linear;
   -moz-transition: background-position 0.2s ease-in, color 0.2s linear;
@@ -107,6 +107,6 @@
     color: var(--projectBGColor);
     cursor: pointer;
     background-position: -100% 100%;
-    border: .2em solid var(--contentMainColor);
+    border: none;
   }
 }

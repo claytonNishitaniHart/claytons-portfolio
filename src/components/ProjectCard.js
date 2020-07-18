@@ -24,7 +24,7 @@ class ProjectCard extends React.Component{
                     <span className={"info-name"}>{this.props.projectName}</span>
                     <span className={"info-description"}>{this.props.projectDescription}</span>
                     <div className={"info-button-container"}>
-                        <a className={"info-button"} href={this.props.projectLink} target={"_blank"} rel={"noopener noreferrer"}>Link</a>
+                        <button className={"info-button"} onClick={() => {window.location.href=this.props.projectLink}}>Link</button>
                     </div>
                 </div>
             </div>
