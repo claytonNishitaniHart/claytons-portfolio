@@ -12,13 +12,7 @@ class ProjectCard extends React.Component{
     }
 
     cardHover() {
-        this.setState({hovering: !this.state.hovering});
-        let card_info = document.getElementById("info"+ this.props.projectName);
-        if (this.state.hovering) {
-            card_info.style.bottom = "0";
-        } else {
-            card_info.style.bottom = "-110px";
-        }
+    
     }
 
     render() {
@@ -29,7 +23,9 @@ class ProjectCard extends React.Component{
                 <div id={"info"+ this.props.projectName} className={"Card-info"}>
                     <span className={"info-name"}>{this.props.projectName}</span>
                     <span className={"info-description"}>{this.props.projectDescription}</span>
-                    <a className={"info-button"} href={this.props.projectLink} target={"_blank"} rel={"noopener noreferrer"}>Link</a>
+                    <div className={"info-button-container"}>
+                        <a className={"info-button"} href={this.props.projectLink} target={"_blank"} rel={"noopener noreferrer"}>Link</a>
+                    </div>
                 </div>
             </div>
         );

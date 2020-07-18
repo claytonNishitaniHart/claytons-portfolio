@@ -65,8 +65,10 @@ class LandingPage extends React.Component {
             <div className={"LandingPage"}>
                 <div className={"LandingPage-Heading"}>
                     <img className={"LandingPage-Logo"} src={Logo} alt={"logo"} />
-                    <h2 className={"LandingPage-Text"}><span role={"img"} aria-label={"cool"}>😎</span>CLAYTON NISHITANI-HART<span role={"img"} aria-label={"cool"}>😎</span></h2>
+                    <h1 className={"LandingPage-Text"}><span role={"img"} aria-label={"cool"}>😎</span>CLAYTON NISHITANI-HART<span role={"img"} aria-label={"cool"}>😎</span></h1>
                     <button className={"LandingPage-Button"} onClick={this.gotoPosition}>PROJECTS</button>
+                </div>
+                <div className={"LandingPage-Toggle-Container"}>
                     <button className={"LandingPage-Toggle"} onClick={this.toggleLightDarkMode}>
                         <span className={"sun"} role={"img"} aria-label={"sun"}>☀️</span>
                         <span className={"moon"} role={"img"} aria-label={"moon"}>🌑</span>

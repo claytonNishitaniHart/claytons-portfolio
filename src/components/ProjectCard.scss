@@ -1,7 +1,9 @@
 .Card-base {
   position: relative;
   width: 300px;
-  height: 405px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-color: aquamarine;
   overflow: hidden;
 }
@@ -22,47 +24,89 @@
 
 .Card-info {
   position: absolute;
-  bottom: -105px;
-  left: 10px;
-  height: 190px;
-  width: 280px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   z-index: 2;
-  color: white;
-  transition: bottom ease-in 250ms;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  color: var(--contentMainColor);
+  background-color: var(--projectBGColor);
+  opacity: 0;
+  transition: opacity ease-in 250ms;
+  -o-transition: opacity ease-in 250ms;
+  -moz-transition: opacity ease-in 250ms;
+  -webkit-transition: opacity ease-in 250ms;
+}
+
+.Card-base .Card-info:hover {
+  opacity: 1;
 }
 
 .info-name {
   position: absolute;
   top: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 33%;
+  padding: 50px 20px;
+  text-align: center;
   font-size: 2rem;
 }
 
 .info-description {
   position: absolute;
-  top: 85px;
+  top: 100px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 33%;
+  padding: 50px 20px;
+  text-align: center;
   font-size: 1rem;
 }
 
-.info-button {
+.info-button-container {
   position: absolute;
-  width: 20px;
-  top: 150px;
-  left: 120px;
-  font-size: 1rem;
-  color: white;
+  top: 200px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 33%;
+}
+
+.info-button {
+  width: 6rem;
+  height: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: .2em solid;
+  font-size: 1.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+
+  color: var(--contentMainColor);
+
+  background-image: linear-gradient(180deg,
+          var(--initialBgColor) 0%,
+          var(--initialBgColor) 50%,
+          var(--contentMainColor) 50%,
+          var(--contentMainColor) 100%);
+  background-size: 100% 200%;
+  transition: background-position 0.2s ease-in, color 0.2s linear;
+  -o-transition: background-position 0.2s ease-in, color 0.2s linear;
+  -moz-transition: background-position 0.2s ease-in, color 0.2s linear;
+  -webkit-transition: background-position 0.2s ease-in, color 0.2s linear;
+  transition-delay: 0.0s, 0.15s;
+  -o-transition-delay: 0.0s, 0.15s;
+  -moz-transition-delay: 0.0s, 0.15s;
+  -webkit-transition-delay: 0.0s, 0.15s;
   text-decoration: none;
-  &::after {
-    content: '\2192';
-    position: absolute;
-    transform: translate(15px, -17px);
-    opacity: 0;
-    transition: all ease-in 250ms;
-  }
   &:hover {
-    &::after {
-      transform: translate(30px, -17px);
-      opacity: 1;
-    }
+    color: var(--projectBGColor);
+    cursor: pointer;
+    background-position: -100% 100%;
+    border: .2em solid var(--contentMainColor);
   }
 }

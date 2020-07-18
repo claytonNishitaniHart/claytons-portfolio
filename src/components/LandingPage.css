@@ -1,5 +1,8 @@
 body {
     transition: background-color 0.5s ease-in;
+    -o-transition: background-color 0.5s ease-in;
+    -moz-transition: background-color 0.5s ease-in;
+    -webkit-transition: background-color 0.5s ease-in;
 }
 
 :root {
@@ -31,6 +34,8 @@ body {
 
     /*HEADING*/
     --headingGrad: linear-gradient(0deg, var(--lightGrad1) 0%, var(--lightGrad2) 100%);
+    --grad1: var(--lightGrad1);
+    --grad2: var(--lightGrad2);
     --headingMainColor: white;
 
     /*CONTENT*/
@@ -38,6 +43,9 @@ body {
     --contentBGColor: var(--lightMainColor);
     --buttonColor: var(--lightButtonColor);
     background-color: var(--lightMainColor);
+
+    /*PROJECT CARDS*/
+    --projectBGColor: rgba(219, 226, 255, 0.8);
 }
 
 .dark {
@@ -50,6 +58,8 @@ body {
 
     /*HEADING*/
     --headingGrad: linear-gradient(0deg, var(--darkGrad1) 0%, var(--darkGrad2) 100%);
+    --grad1: var(--darkGrad1);
+    --grad2: var(--darkGrad2);
     --headingMainColor: var(--darkSecondaryColor);
 
     /*CONTENT*/
@@ -57,35 +67,56 @@ body {
     --contentBGColor: var(--darkMainColor);
     --buttonColor: var(--darkButtonColor);
     background-color: var(--darkMainColor);
+
+    /*PROJECT CARDS*/
+    --projectBGColor: rgba(75, 75, 75, 0.8);
 }
 
 .LandingPage-Heading {
+    position: relative;
     background: var(--headingGrad);
     height: 90vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60% 15% 20%;
+    place-items: center;
     font-size: calc(10px + 2vmin);
     color: var(--headingMainColor);
-    clip-path: polygon(50% 0%, 100% 0%, 100% 65%, 50% 100%, 0% 65%, 0% 0%);
-    transition: background 0.5s ease-in, color 1s ease-in;
+    clip-path: polygon(50% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%, 0% 0%);
+    transition: color 1s ease-in;
+    -o-transition: color 1s ease-in;
+    -moz-transition: color 1s ease-in;
+    -webkit-transition: color 1s ease-in;
 }
 
 .LandingPage-Content {
     position: relative;
     padding-top: 2rem;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
     font-size: calc(10px + 2vmin);
     z-index: 999;
     color: var(--contentMainColor);
-    background-color: var(--contentBGColor);
-    transition: background-color 0.5s ease-in, color 1s ease-in;
+    transition: color 1s ease-in;
+    -o-transition: color 1s ease-in;
+    -moz-transition: color 1s ease-in;
+    -webkit-transition: color 1s ease-in;
 }
 
 #Projects {
+    position: relative;
+    display: inline;
     margin-left: 3rem;
     margin-top: 2rem;
+}
+
+#Projects::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, var(--grad1), var(--grad2));
 }
 
 .LandingPage-Projects {
@@ -100,19 +131,16 @@ body {
 .LandingPage-Text {
     position: fixed;
     display: inline;
-    bottom: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-left: 15vw;
+    padding-right: 15vw;
+    transform: translateY(15vh);
     font-size: 3rem;
+    text-align: center;
     pointer-events: none;
 }
 
 .LandingPage-Logo {
-    width: 250px;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 100%;
 }
 
 @keyframes rainbow {
@@ -126,17 +154,20 @@ body {
 
 .LandingPage-Logo:hover {
     animation: rainbow 2s linear;
+    -o-animation: rainbow 2s linear;
+    -moz-animation: rainbow 2s linear;
+    -webkit-animation: rainbow 2s linear;
     animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }
 
 .LandingPage-Button {
     width: 12rem;
     height: 4rem;
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     border: .2em solid;
+    grid-row-start: 3;
     font-size: 1.5rem;
     background-color: transparent;
     cursor: pointer;
@@ -150,9 +181,14 @@ body {
     var(--slideBgColor) 50%,
     var(--slideBgColor) 100%);
     background-size: 100% 200%;
-    transition: background-position .2s ease-in,
-    color .2s linear;
+    transition: background-position 0.2s ease-in, color 0.2s linear;
+    -o-transition: background-position 0.2s ease-in, color 0.2s linear;
+    -moz-transition: background-position 0.2s ease-in, color 0.2s linear;
+    -webkit-transition: background-position 0.2s ease-in, color 0.2s linear;
     transition-delay: 0.0s, 0.15s;
+    -o-transition-delay: 0.0s, 0.15s;
+    -moz-transition-delay: 0.0s, 0.15s;
+    -webkit-transition-delay: 0.0s, 0.15s;
 }
 
 .LandingPage-Button:hover {
@@ -162,45 +198,58 @@ body {
     border: none;
 }
 
+.LandingPage-Toggle-Container {
+    position: fixed;
+    top: 10px;
+    right: 55px;
+    display: inline;
+    z-index: 9999;
+}
+
 .LandingPage-Toggle {
     width: 4rem;
     height: 2rem;
-    position: absolute;
-    top: 10px;
-    right: 45px;
+    position: relative;
+    top: 0;
+    right: 0;
     border: .1em solid;
     border-radius: 2rem;
     background-color: transparent;
     color: var(--initialTextColor);
     cursor: pointer;
+    z-index: 4;
 }
 
 .LandingPage-Toggle::before {
     content: '';
     position: absolute;
+    display: inline-block;
     width: 1.5rem;
     height: 1.5rem;
-    border: 0.1em solid;
+    border: 0.1rem solid;
     border-radius: 100%;
     top: 0.1rem;
-    left: 0.1rem;
+    right: 2.1rem;
     color: var(--initialTextColor);
     background-color: var(--initialTextColor);
     transform: translateX(var(--togglePos));
     transition: transform 0.25s ease-out;
+    -o-transition: transform 0.25s ease-out;
+    -moz-transition: transform 0.25s ease-out;
+    -webkit-transition: transform 0.25s ease-out;
 }
 
 .sun {
     position: absolute;
     top: -5px;
-    left: -35px;
+    right: 4rem;
     font-size: 2rem;
 }
 
 .moon {
     position: absolute;
-    top: -2px;
-    right: -35px;
+    top: -3px;
+    right: -2rem;
     font-size: 1.75rem;
 }
 
@@ -230,6 +279,9 @@ body {
     z-index: 4;
     opacity: 0;
     transition: all ease-in 150ms;
+    -o-transition: all ease-in 150ms;
+    -moz-transition: all ease-in 150ms;
+    -webkit-transition: all ease-in 150ms;
 }
 
 .socials-button {
@@ -257,4 +309,25 @@ body {
     position: relative;
     top: 100px;
     left: 35px;
+}
+
+@media only screen and (max-width: 600px) {
+    .LandingPage-Heading {
+        clip-path: polygon(50% 0%, 100% 0%, 100% 95%, 50% 100%, 0% 95%, 0% 0%);
+    }
+
+    .LandingPage-Logo {
+        height: 75%;
+    }
+
+    .LandingPage-Text {
+        position: fixed;
+        display: inline;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 2.2rem;
+        transform: translateY(15vh);
+        text-align: center;
+        pointer-events: none;
+    }
 }
