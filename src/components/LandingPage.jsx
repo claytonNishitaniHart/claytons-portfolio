@@ -12,7 +12,8 @@ import Controller from "./../images/eiro.png";
 import Eiro from "./../images/eiro_bg.png";
 import Weather from "./../images/weather.png";
 import Bliss from "./../images/bliss.png";
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import Resume from "./../Resume.pdf";
+import { FaGithubSquare, FaLinkedin, FaFileAlt } from "react-icons/fa";
 
 class LandingPage extends React.Component {
     constructor(props) {
@@ -50,7 +51,6 @@ class LandingPage extends React.Component {
     toggleSocials() {
         let element = document.getElementById("socials-panel");
         this.setState({showingSocials: !this.state.showingSocials});
-        console.log(this.state.showingSocials);
         if (this.state.showingSocials) {
             element.style.height = "200px";
             element.style.opacity = "1";
@@ -63,6 +63,7 @@ class LandingPage extends React.Component {
     render() {
         return (
             <div className={"LandingPage"}>
+                <a className={"LandingPage-ResumeLink"} href={Resume}><FaFileAlt/>Resume</a>
                 <div className={"LandingPage-Heading"}>
                     <img className={"LandingPage-Logo"} src={Logo} alt={"logo"} />
                     <h1 className={"LandingPage-Text"}><span role={"img"} aria-label={"cool"}>😎</span>CLAYTON NISHITANI-HART<span role={"img"} aria-label={"cool"}>😎</span></h1>
@@ -84,6 +85,9 @@ class LandingPage extends React.Component {
                         <ProjectCard projectName={"Weather App"} projectDescription={"A weather app that uses the user's location to get the weather for each day in a week."} projectImage={Weather} projectBackground={Bliss} projectLink={"https://weather-app-topaz-nine.vercel.app/"}/>
                     </div>
                     <div className={"socials"} onClick={this.toggleSocials}>
+                        <div className={"socials-clickme"}>
+                            Click me for socials
+                        </div>
                         <img className={"socials-img"} src={Logo} alt={"socials"}/>
                     </div>
                     <div id={"socials-panel"} className={"socials-panel"}>
@@ -95,6 +99,7 @@ class LandingPage extends React.Component {
                         </a>
                     </div>
                 </div>
+                <div className={"LandingPage-Footer"}/>
             </div>
         );
     }

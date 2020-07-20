@@ -106,9 +106,9 @@ body {
 
 #Projects {
     position: relative;
-    display: inline;
+    display: inline-block;
     margin-left: 3rem;
-    margin-top: 2rem;
+    padding-top: 1.8rem;
 }
 
 #Projects::after {
@@ -122,7 +122,7 @@ body {
 }
 
 .LandingPage-Projects {
-    padding: 5vh 3vw;
+    margin: 4rem 3rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
     grid-gap: 3rem;
@@ -250,12 +250,37 @@ body {
 .moon {
     position: absolute;
     top: -3px;
-    right: -2rem;
+    right: -2.1rem;
     font-size: 1.75rem;
 }
 
 .LandingPage-Toggle:focus {
     outline: 0;
+}
+
+.socials-clickme {
+    position: fixed;
+    bottom: calc(1vh + 80px);
+    right: calc(1.8vw + 90px);
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px 10px 0 10px;
+    font-size: 0.75em;
+    font-weight: 700;
+    z-index: 999;
+    display: none;
+}
+
+.socials-clickme::after {
+    content: "";
+    position: absolute;
+    border-left: 8px solid transparent;
+    border-right: 16px solid white;
+    border-top: 8px solid white;
+    border-bottom: 14px solid transparent;
+    right: -1px;
+    bottom: -12px;
+    transform: rotateZ(-15deg);
 }
 
 .socials {
@@ -264,6 +289,10 @@ body {
     right: 1.8vw;
     z-index: 999;
     cursor: pointer;
+}
+
+.socials:hover > .socials-clickme {
+    display: inline-block;
 }
 
 .socials-img {
@@ -310,6 +339,30 @@ body {
     position: relative;
     top: 100px;
     left: 35px;
+}
+
+.LandingPage-ResumeLink {
+    position: absolute;
+    top: 10px;
+    left: 45px;
+    z-index: 5;
+    text-decoration: none;
+    border: .1em solid white;
+    color: white;
+    background-color: var(--grad2);
+    padding: 0.5em;
+    transition: background-color ease-in 150ms, color ease-in 150ms;
+}
+
+.LandingPage-ResumeLink:hover {
+    background-color: white;
+    color: var(--grad2);
+}
+
+.LandingPage-Footer {
+    height: 25vh;
+    width: 100vw;
+    background-color: var(--grad2);
 }
 
 @media only screen and (max-width: 600px) {
