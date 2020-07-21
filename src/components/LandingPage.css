@@ -12,6 +12,7 @@ body {
     --lightGrad1: rgba(85,154,215,1);
     --lightGrad2: rgba(255,109,243,1);
     --lightMainColor: #dbe2ff;
+    --lightMainColor2: #c1c7e0;
     --lightSecondaryColor: #4b4b4b;
     --lightAccentColor: rgba(157,138,226,1);
     --lightButtonColor: #711bd9;
@@ -20,6 +21,7 @@ body {
     --darkGrad1: #1e5b5c;
     --darkGrad2: #711bd9;
     --darkMainColor: #4b4b4b;
+    --darkMainColor2: #585858;
     --darkSecondaryColor: white;
     --darkAccentColor: #3d4c81;
     --darkButtonColor: #ab8adc;
@@ -43,6 +45,7 @@ body {
     /*CONTENT*/
     --contentMainColor: var(--lightSecondaryColor);
     --contentBGColor: var(--lightMainColor);
+    --footerBGColor: var(--lightMainColor2);
     --buttonColor: var(--lightButtonColor);
     background-color: var(--lightMainColor);
 
@@ -67,6 +70,7 @@ body {
     /*CONTENT*/
     --contentMainColor: var(--darkSecondaryColor);
     --contentBGColor: var(--darkMainColor);
+    --footerBGColor: var(--darkMainColor2);
     --buttonColor: var(--darkButtonColor);
     background-color: var(--darkMainColor);
 
@@ -360,9 +364,13 @@ body {
 }
 
 .LandingPage-Footer {
+    display: grid;
     height: 25vh;
     width: 100vw;
-    background-color: var(--grad2);
+    color: var(--contentMainColor);
+    background-color: var(--footerBGColor);
+    place-items: center;
+    transition: background-color 0.5s ease-in;
 }
 
 @media only screen and (max-width: 600px) {

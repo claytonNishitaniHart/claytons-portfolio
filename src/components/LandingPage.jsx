@@ -63,7 +63,7 @@ class LandingPage extends React.Component {
     render() {
         return (
             <div className={"LandingPage"}>
-                <a className={"LandingPage-ResumeLink"} href={Resume}><FaFileAlt/>Resume</a>
+                <a className={"LandingPage-ResumeLink"} href={Resume} target={'_blank'} rel={"noopener noreferrer"}><FaFileAlt/>Resume</a>
                 <div className={"LandingPage-Heading"}>
                     <img className={"LandingPage-Logo"} src={Logo} alt={"logo"} />
                     <h1 className={"LandingPage-Text"}><span role={"img"} aria-label={"cool"}>😎</span>CLAYTON NISHITANI-HART<span role={"img"} aria-label={"cool"}>😎</span></h1>
@@ -78,11 +78,11 @@ class LandingPage extends React.Component {
                 <div className={"LandingPage-Content"}>
                     <h2 id={"Projects"}>Projects</h2>
                     <div className={"LandingPage-Projects"}>
-                        <ProjectCard projectName={"Easybank Landing Page"} projectDescription={"A landing page for a fictional bank for FrontendMentor.io"} projectImage={EasyBank} projectBackground={EasyBankBG} projectLink={"https://easybank-landing-page-xi-five.vercel.app/"}/>
-                        <ProjectCard projectName={"Nook's Cranny ecommerce shop"} projectDescription={"An ecommerce website based on Nook's Cranny."} projectImage={TomNook} projectBackground={NooksCranny} projectLink={"https://nooks-cranny.vercel.app/"}/>
-                        <ProjectCard projectName={"Dwight Schrute Twitter bot"} projectDescription={"A twitter bot that responds to mentions that contain the #dwigtschrudequote."} projectImage={DwightSchrute} projectBackground={TheOffice} projectLink={"https://github.com/claytonNishitaniHart/twitterbot"}/>
-                        <ProjectCard projectName={"Eiro"} projectDescription={"Eiro was my final year project that another programmer, three artists, and I worked on for a full year."} projectImage={Controller} projectBackground={Eiro} projectLink={"https://jack3311.itch.io/eiro"}/>
-                        <ProjectCard projectName={"Weather App"} projectDescription={"A weather app that uses the user's location to get the weather for each day in a week."} projectImage={Weather} projectBackground={Bliss} projectLink={"https://weather-app-topaz-nine.vercel.app/"}/>
+                        <ProjectCard projectName={"Easybank Landing Page"} projectDescription={"A landing page for a fictional bank for FrontendMentor.io"} projectImage={EasyBank} projectBackground={EasyBankBG} projectDemoLink={"https://easybank-landing-page-xi-five.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/easybank-landing-page"}/>
+                        <ProjectCard projectName={"Nook's Cranny ecommerce shop"} projectDescription={"An ecommerce website based on Nook's Cranny."} projectImage={TomNook} projectBackground={NooksCranny} projectDemoLink={"https://nooks-cranny.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/nooks-cranny"}/>
+                        <ProjectCard projectName={"Dwight Schrute Twitter bot"} projectDescription={"A twitter bot that responds to mentions that contain the #dwigtschrudequote."} projectImage={DwightSchrute} projectBackground={TheOffice} projectDemoLink={null} projectCodeLink={"https://github.com/claytonNishitaniHart/twitterbot"}/>
+                        <ProjectCard projectName={"Eiro"} projectDescription={"Eiro was my final year project that another programmer, three artists, and I worked on for a full year."} projectImage={Controller} projectBackground={Eiro} projectDemoLink={null} projectCodeLink={"https://jack3311.itch.io/eiro"}/>
+                        <ProjectCard projectName={"Weather App"} projectDescription={"A weather app that uses the user's location to get the weather for each day in a week."} projectImage={Weather} projectBackground={Bliss} projectDemoLink={"https://weather-app-topaz-nine.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/weather-app"}/>
                     </div>
                     <div className={"socials"} onClick={this.toggleSocials}>
                         <div className={"socials-clickme"}>
@@ -99,7 +99,9 @@ class LandingPage extends React.Component {
                         </a>
                     </div>
                 </div>
-                <div className={"LandingPage-Footer"}/>
+                <div className={"LandingPage-Footer"}>
+                    contact me at: claytonnishitanihart@gmail.com
+                </div>
             </div>
         );
     }
