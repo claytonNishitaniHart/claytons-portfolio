@@ -12,7 +12,7 @@ body {
     --lightGrad1: rgba(85,154,215,1);
     --lightGrad2: rgba(255,109,243,1);
     --lightMainColor: #dbe2ff;
-    --lightMainColor2: #c1c7e0;
+    --lightMainColor2: #d3daf5;
     --lightSecondaryColor: #4b4b4b;
     --lightAccentColor: rgba(157,138,226,1);
     --lightButtonColor: #711bd9;
@@ -21,7 +21,7 @@ body {
     --darkGrad1: #1e5b5c;
     --darkGrad2: #711bd9;
     --darkMainColor: #4b4b4b;
-    --darkMainColor2: #585858;
+    --darkMainColor2: #525252;
     --darkSecondaryColor: white;
     --darkAccentColor: #3d4c81;
     --darkButtonColor: #ab8adc;
