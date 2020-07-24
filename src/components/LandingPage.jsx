@@ -2,6 +2,8 @@ import React from "react";
 import "./LandingPage.css";
 import ProjectCard from "./ProjectCard";
 import Logo from "./../images/face.png";
+import Flag from "./../images/flag.png";
+import FlagsBG from "./../images/flags_bg.png";
 import EasyBank from "./../images/easybank.png";
 import EasyBankBG from "./../images/easybank_bg.png";
 import TomNook from "./../images/tom_nook.png";
@@ -78,11 +80,12 @@ class LandingPage extends React.Component {
                 <div className={"LandingPage-Content"}>
                     <h2 id={"Projects"}>Projects</h2>
                     <div className={"LandingPage-Projects"}>
-                        <ProjectCard projectName={"Easybank Landing Page"} projectDescription={"A landing page for a fictional bank for FrontendMentor.io"} projectImage={EasyBank} projectBackground={EasyBankBG} projectDemoLink={"https://easybank-landing-page-xi-five.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/easybank-landing-page"}/>
-                        <ProjectCard projectName={"Nook's Cranny ecommerce shop"} projectDescription={"An ecommerce website based on Nook's Cranny."} projectImage={TomNook} projectBackground={NooksCranny} projectDemoLink={"https://nooks-cranny.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/nooks-cranny"}/>
-                        <ProjectCard projectName={"Dwight Schrute Twitter bot"} projectDescription={"A twitter bot that responds to mentions that contain the #dwigtschrudequote."} projectImage={DwightSchrute} projectBackground={TheOffice} projectDemoLink={null} projectCodeLink={"https://github.com/claytonNishitaniHart/twitterbot"}/>
-                        <ProjectCard projectName={"Eiro"} projectDescription={"Eiro was my final year project that another programmer, three artists, and I worked on for a full year."} projectImage={Controller} projectBackground={Eiro} projectDemoLink={"https://jack3311.itch.io/eiro"} projectCodeLink={null}/>
-                        <ProjectCard projectName={"Weather App"} projectDescription={"A weather app that uses the user's location to get the weather for each day in a week."} projectImage={Weather} projectBackground={Bliss} projectDemoLink={"https://weather-app-topaz-nine.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/weather-app"}/>
+                        <ProjectCard projectName={"Countries Web App"} projectDescription={"A web app where you can get information about countries, using React.js, SASS, HTML, REST API."} projectImage={Flag} projectBackground={FlagsBG} projectDemoLink={"https://rest-countries-api-swart.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/rest-countries-api"}/>
+                        <ProjectCard projectName={"Easybank Landing Page"} projectDescription={"A landing page for a fictional bank for FrontendMentor.io, using React.js, SASS, HTML."} projectImage={EasyBank} projectBackground={EasyBankBG} projectDemoLink={"https://easybank-landing-page-xi-five.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/easybank-landing-page"}/>
+                        <ProjectCard projectName={"Nook's Cranny ecommerce shop"} projectDescription={"An ecommerce website based on Nook's Cranny, using React.js, CSS, HTML, REST API."} projectImage={TomNook} projectBackground={NooksCranny} projectDemoLink={"https://nooks-cranny.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/nooks-cranny"}/>
+                        <ProjectCard projectName={"Dwight Schrute Twitter bot"} projectDescription={"A twitter bot that responds to mentions, using Python, Twitter API."} projectImage={DwightSchrute} projectBackground={TheOffice} projectDemoLink={null} projectCodeLink={"https://github.com/claytonNishitaniHart/twitterbot"}/>
+                        <ProjectCard projectName={"Eiro, (PC Game made with Unity)"} projectDescription={"Eiro was my final year project, it is a 3D adventure game, using C#, Unity3D."} projectImage={Controller} projectBackground={Eiro} projectDemoLink={"https://jack3311.itch.io/eiro"} projectCodeLink={null}/>
+                        <ProjectCard projectName={"Weather Web App"} projectDescription={"A weather app that uses the user's location to get the weather, using React.js, CSS, REST API."} projectImage={Weather} projectBackground={Bliss} projectDemoLink={"https://weather-app-topaz-nine.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/weather-app"}/>
                     </div>
                     <div className={"socials"} onClick={this.toggleSocials}>
                         <div className={"socials-clickme"}>
