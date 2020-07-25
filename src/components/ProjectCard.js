@@ -7,7 +7,7 @@ class ProjectCard extends React.Component{
         const codeLink = this.props.projectCodeLink ? <button className={"info-button"} onClick={() => {window.open(this.props.projectCodeLink, "_blank")}}>Code</button> : null
         
         return(
-            <div className={"Card-base"}>
+            <div className={"Card-base"} id={this.props.bgGrad} >
                 <img className={"Card-background"} src={this.props.projectBackground} alt={""}/>
                 <img className={"Card-image"} src={this.props.projectImage} alt={""}/>
                 <div id={"info"+ this.props.projectName} className={"Card-info"}>
