@@ -8,7 +8,7 @@ import FlagsBG from "./../images/flags_bg.png";
 import EasyBank from "./../images/easybank.png";
 import TomNook from "./../images/tom_nook.png";
 import NooksCranny from "./../images/nooks_cranny.jpg";
-import DwightSchrute from "./../images/dwight_schrute.png";
+import DwightSchrute from "./../images/dwight_schrute.webp";
 import TheOffice from "./../images/the_office.jpg";
 import Controller from "./../images/eiro.png";
 import Eiro from "./../images/eiro_bg.png";
