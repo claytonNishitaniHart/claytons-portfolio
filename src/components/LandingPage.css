@@ -262,10 +262,18 @@ body {
     outline: 0;
 }
 
+.socials-container {
+    display: inline-block;
+    position: sticky;
+    bottom: 1vh;
+    left: 90vw;
+    z-index: 999;
+}
+
 .socials-clickme {
-    position: fixed;
+    position: absolute;
     bottom: calc(1vh + 80px);
-    right: calc(1.8vw + 90px);
+    left: -210px;
     padding: 15px;
     background-color: white;
     border-radius: 10px 10px 0 10px;
@@ -288,9 +296,9 @@ body {
 }
 
 .socials {
-    position: fixed;
+    display: inline-block;
+    position: absolute;
     bottom: 1vh;
-    right: 1.8vw;
     z-index: 999;
     cursor: pointer;
 }
@@ -305,11 +313,11 @@ body {
 }
 
 .socials-panel {
-    position: fixed;
-    bottom: calc(1vh + 110px);
-    right: 2vw;
+    position: absolute;
+    bottom: 1vh;
+    left: -25px;
     width: 100px;
-    height: 0;
+    height: 200px;
     z-index: 4;
     opacity: 0;
     transition: all ease-in 150ms;
@@ -388,6 +396,14 @@ body {
         padding-right: 10vw;
         box-sizing: border-box;
         font-size: calc(1.5em + 2vmin);
+    }
+
+    .socials-container {
+        left: 75vw;
+    }
+
+    .socials-clickme {
+        left: -160px;
     }
 }
 

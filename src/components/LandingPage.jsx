@@ -54,10 +54,10 @@ class LandingPage extends React.Component {
         let element = document.getElementById("socials-panel");
         this.setState({showingSocials: !this.state.showingSocials});
         if (this.state.showingSocials) {
-            element.style.height = "200px";
+            element.style.bottom = "calc(1vh + 110px)";
             element.style.opacity = "1";
         } else {
-            element.style.height = "0";
+            element.style.bottom = "1vh";
             element.style.opacity = "0";
         }
     }
@@ -88,19 +88,21 @@ class LandingPage extends React.Component {
                         <ProjectCard projectName={"Eiro, (PC Game made with Unity)"} projectDescription={"Eiro was my final year project, it is a 3D adventure game, using C#, Unity3D."} projectImage={Controller} projectBackground={Eiro} projectDemoLink={"https://jack3311.itch.io/eiro"} projectCodeLink={null}/>
                         <ProjectCard projectName={"Weather Web App"} projectDescription={"A weather app that uses the user's location to get the weather, using React.js, CSS, REST API."} projectImage={Weather} projectBackground={Bliss} projectDemoLink={"https://weather-app-topaz-nine.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/weather-app"}/>
                     </div>
-                    <div className={"socials"} onClick={this.toggleSocials}>
-                        <div className={"socials-clickme"}>
-                            Click me for socials
+                    <div className={"socials-container"}>
+                        <div className={"socials"} onClick={this.toggleSocials}>
+                            <div className={"socials-clickme"}>
+                                Click me for socials
+                            </div>
+                            <img className={"socials-img"} src={Logo} alt={"socials"}/>
                         </div>
-                        <img className={"socials-img"} src={Logo} alt={"socials"}/>
-                    </div>
-                    <div id={"socials-panel"} className={"socials-panel"}>
-                        <a className={"socials-button github"} href={"https://github.com/claytonNishitaniHart"} target={"_blank"} rel={"noopener noreferrer"}>
-                            <FaGithubSquare className={"button-icon"}/>
-                        </a>
-                        <a className={"socials-button linkedin"} href={"https://www.linkedin.com/in/clayton-nishitani-hart-845b93175/a"} target={"_blank"} rel={"noopener noreferrer"}>
-                            <FaLinkedin className={"button-icon"}/>
-                        </a>
+                        <div id={"socials-panel"} className={"socials-panel"}>
+                            <a className={"socials-button github"} href={"https://github.com/claytonNishitaniHart"} target={"_blank"} rel={"noopener noreferrer"}>
+                                <FaGithubSquare className={"button-icon"}/>
+                            </a>
+                            <a className={"socials-button linkedin"} href={"https://www.linkedin.com/in/clayton-nishitani-hart-845b93175/a"} target={"_blank"} rel={"noopener noreferrer"}>
+                                <FaLinkedin className={"button-icon"}/>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div className={"LandingPage-Footer"}>
