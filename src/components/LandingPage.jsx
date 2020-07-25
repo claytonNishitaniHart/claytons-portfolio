@@ -11,7 +11,7 @@ import NooksCranny from "./../images/nooks_cranny.jpg";
 import DwightSchrute from "./../images/dwight_schrute.webp";
 import TheOffice from "./../images/the_office.jpg";
 import Controller from "./../images/eiro.png";
-import Eiro from "./../images/eiro_bg.png";
+import Eiro from "./../images/eiro_bg.webp";
 import Weather from "./../images/weather.png";
 import Bliss from "./../images/bliss.png";
 import Resume from "./../Resume.pdf";
