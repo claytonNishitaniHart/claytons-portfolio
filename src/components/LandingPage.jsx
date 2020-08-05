@@ -2,6 +2,7 @@ import React from "react";
 import "./LandingPage.css";
 import ProjectCard from "./ProjectCard";
 import Logo from "./../images/face.png";
+import BobRoss from './../images/bobross.png';
 import Claytinstagram from './../images/claytinstagram.png';
 import Illustration from './../images/illustration.png';
 import Flag from "./../images/flag.png";
@@ -81,6 +82,7 @@ class LandingPage extends React.Component {
                 <div className={"LandingPage-Content"}>
                     <h2 id={"Projects"}>Projects</h2>
                     <div className={"LandingPage-Projects"}>
+                        <ProjectCard projectName={"PAINT: painting gallery"} projectDescription={"A gallery where I upload my paintings following Bob Ross videos, using React.js, SASS, HTML."} projectImage={BobRoss} bgGrad={"bg4"} projectDemoLink={"https://claytons-paintings.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/claytons-paintings"}/>
                         <ProjectCard projectName={"Claytinstagram: Instagram Clone"} projectDescription={"Followed a tutorial, improved on it by implementing likes and comments, using Laravel."} projectImage={Claytinstagram} bgGrad={"bg3"} projectDemoLink={"http://claytinstagram.herokuapp.com/"} projectCodeLink={"https://github.com/claytonNishitaniHart/claytinstagram"}/>
                         <ProjectCard projectName={"Feature CSS Illustration"} projectDescription={"A feature illustration for a fictional Chat app, using React.js, SASS, HTML."} projectImage={Illustration} bgGrad={"bg1"} projectDemoLink={"https://css-illustration.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/css-illustration"}/>
                         <ProjectCard projectName={"Countries Web App"} projectDescription={"A web app where you can get information about countries, using React.js, SASS, HTML, REST API."} projectImage={Flag} projectBackground={FlagsBG} projectDemoLink={"https://rest-countries-api-swart.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/rest-countries-api"}/>
