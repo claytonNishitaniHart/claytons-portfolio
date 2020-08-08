@@ -86,6 +86,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: 60% 15% 20%;
     place-items: center;
+    padding-top: 15px;
     font-size: calc(10px + 2vmin);
     color: var(--headingMainColor);
     clip-path: polygon(50% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%, 0% 0%);
@@ -108,14 +109,14 @@ body {
     -webkit-transition: color 1s ease-in;
 }
 
-#Projects {
+.Title {
     position: relative;
     display: inline-block;
     margin-left: 3rem;
     padding-top: 1.8rem;
 }
 
-#Projects::after {
+.Title::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -125,8 +126,13 @@ body {
     background: linear-gradient(to right, var(--grad1), var(--grad2));
 }
 
+.About-Me {
+    margin: 1rem 3rem;
+    padding-bottom: 5rem;
+}
+
 .LandingPage-Projects {
-    margin: 4rem 3rem;
+    margin: 2rem 3rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
     grid-gap: 3rem;
@@ -205,7 +211,7 @@ body {
 
 .LandingPage-Toggle-Container {
     position: fixed;
-    top: 10px;
+    top: 15px;
     right: 55px;
     display: inline;
     z-index: 9999;
@@ -355,7 +361,7 @@ body {
 
 .LandingPage-ResumeLink {
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 45px;
     z-index: 5;
     text-decoration: none;
