@@ -211,7 +211,7 @@ body {
 
 .LandingPage-Toggle-Container {
     position: fixed;
-    top: 16px;
+    top: 15px;
     right: 55px;
     display: inline;
     z-index: 9999;
