@@ -3,7 +3,6 @@ import "./LandingPage.css";
 import ProjectCard from "./ProjectCard";
 import Logo from "./../images/face.png";
 import BobRoss from './../images/bobross.png';
-import Claytinstagram from './../images/claytinstagram.png';
 import Illustration from './../images/illustration.png';
 import Flag from "./../images/flag.png";
 import FlagsBG from "./../images/flags_bg.png";
