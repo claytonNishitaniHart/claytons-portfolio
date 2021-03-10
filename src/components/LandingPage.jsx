@@ -95,7 +95,7 @@ class LandingPage extends React.Component {
                     <div className={"socials-container"}>
                         <div className={"socials"} onClick={this.toggleSocials}>
                             <div className={"socials-clickme"}>
-                                Click me for socials
+                                <p className={'socials-clickme-text'}>Click me for socials</p>
                             </div>
                             <img className={"socials-img"} src={Logo} alt={"socials"} />
                         </div>
