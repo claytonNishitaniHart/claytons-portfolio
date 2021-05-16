@@ -2,6 +2,7 @@ import React from "react";
 import "./LandingPage.css";
 import ProjectCard from "./ProjectCard";
 import Logo from "./../images/face.png";
+import Lighthouse from './../images/lighthouse.png';
 import BobRoss from './../images/bobross.png';
 import Illustration from './../images/illustration.png';
 import Flag from "./../images/flag.png";
@@ -81,6 +82,7 @@ class LandingPage extends React.Component {
                 <div className={"LandingPage-Content"}>
                     <h2 id={"Projects"} className={"Title"}>Projects</h2>
                     <div className={"LandingPage-Projects"}>
+                        <ProjectCard projectName={"Litehaus: A stock watcher"} projectDescription={"A web app that tracks stock prices, using React.js, Express, PostgreSQL."} projectImage={Lighthouse} bgGrad={"bg5"} projectDemoLink={"https://litehaus.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/litehaus"} />
                         <ProjectCard projectName={"PAINT: painting gallery"} projectDescription={"A gallery where I upload my paintings following Bob Ross videos, using React.js, SASS, HTML."} projectImage={BobRoss} bgGrad={"bg4"} projectDemoLink={"https://claytons-paintings.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/claytons-paintings"} />
                         <ProjectCard projectName={"Feature CSS Illustration"} projectDescription={"A feature illustration for a fictional Chat app, using React.js, SASS, HTML."} projectImage={Illustration} bgGrad={"bg1"} projectDemoLink={"https://css-illustration.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/css-illustration"} />
                         <ProjectCard projectName={"Countries Web App"} projectDescription={"A web app where you can get information about countries, using React.js, SASS, HTML, REST API."} projectImage={Flag} projectBackground={FlagsBG} projectDemoLink={"https://rest-countries-api-swart.vercel.app/"} projectCodeLink={"https://github.com/claytonNishitaniHart/rest-countries-api"} />
